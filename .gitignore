@@ -1,0 +1,11 @@
+# reference photos stay local: several are not licensed for reuse
+refs/*
+!refs/chamber.jpg
+!refs/screen1.jpg
+!refs/mirror/
+refs/mirror/*
+!refs/mirror/om1_screen_release.jpg
+flicker_maps/
+OM-1.artifact.html
+OM-1.html
+__pycache__/

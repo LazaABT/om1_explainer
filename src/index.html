@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" class="loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OM-1</title>
+<meta name="description" content="A scroll-through explainer of how the 1972 Olympus OM-1 film SLR works.">
+<style>/*FONTS*/
+/*CSS*/</style>
+</head>
+<body>
+<div id="load" role="status" aria-label="Loading"><svg viewBox="0 0 100 100"><path d="M50 50c0-5 7-6 9-1 3 8-6 15-14 12-12-4-14-20-5-29 13-13 36-9 45 7 11 21-1 48-26 54"/></svg><span class="mono">Loading <i id="loadp">0%</i></span></div>
+<div id="stage">
+  <canvas id="gl"></canvas>
+  <canvas id="vf"></canvas>
+  <canvas id="ann"></canvas>
+  <div id="pop"></div>
+  <div id="dwell"><i id="dwelli"></i></div>
+  <div id="hero">
+    <div><h1>OM-1</h1><p>Everything a camera needs. Nothing it doesn’t.</p></div>
+    <div id="herofoot">
+      <button id="snd2"><span class="on">Turn sound on</span><span class="off">Sound is on</span></button>
+      <span class="mono hint">Scroll to wind on</span>
+    </div>
+  </div>
+  <div id="cards"></div>
+  <div id="end">
+    <h2>Frame 1.</h2>
+    <p class="tag">Glass, springs, cloth, and one small battery.</p>
+    <dl>
+      <dt>Camera</dt><dd>Olympus OM-1, 1972</dd>
+      <dt>Lens</dt><dd>50 mm f/1.8 Zuiko</dd>
+      <dt>Shutter</dt><dd>1 to 1/1000 s, B</dd>
+      <dt>Finder</dt><dd>97%, 0.92×</dd>
+      <dt>Meter</dt><dd>2 × CdS, match needle</dd>
+      <dt>Size</dt><dd>136 × 83 × 50 mm, 510 g</dd>
+    </dl>
+    <p class="note">An independent tribute, not affiliated with Olympus or OM Digital Solutions. Drawings are simplified. The dog is fictional. Real photos, shown in greyscale, from Wikimedia Commons: JBouchez (CC BY-SA 4.0) and Shieldforyoureyes (CC BY-SA 3.0).</p>
+    <button id="again">Rewind</button>
+  </div>
+</div>
+<div id="hud">
+  <span class="mono" id="chap">OM-1</span>
+  <div id="hudr">
+    <button id="snd" aria-label="Toggle sound"><svg viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 18.5v-13L7.500 9.500z"/><path class="w" d="M15.500 9a4 4 0 0 1 0 6M18 6.500a8 8 0 0 1 0 11"/><path class="x" d="M16 10l4 4m0-4l-4 4"/></svg></button>
+    <div id="countw" title="Exposure counter"><span id="count">S</span></div>
+  </div>
+</div>
+<nav id="nav" aria-label="Chapters"></nav>
+<div id="nogl">This page needs WebGL, which this browser has turned off.</div>
+<div id="spacer"></div>
+<!--SCRIPTS-->
+</body>
+</html>
