@@ -72,7 +72,8 @@ async function init() {
   addEventListener('resize', resize);
   // walk the story once behind the spinner, so every shader and canvas is warm before you can scroll
   const stops = ['size', 'quote', 'section', 'dof1', 'point', 'eye', 'aids', 'fSplit1', 'bokeh', 'zTele', 'roll', 'expAp', 's4', 'spSlow', 'strokeB', 'cry', 'silver', 'roads2', 'neg', 'end'];
-  for (let i = 0; i < stops.length; i++) { const t = A(stops[i]); prevT = t; update(t, 0); await tick(.84 + .15 * i / stops.length); }
+  // warming up is only an optimisation: a failure here must never leave the spinner up
+  for (let i = 0; i < stops.length; i++) { const t = A(stops[i]); prevT = t; try { update(t, 0); } catch (e) { console.warn(e); } await tick(.84 + .15 * i / stops.length); }
   shotAt = flashAt = eyeStart = null; prevT = 0; G.notch = G.stopIdx = undefined;
   update(0, 0);
   const m = /t=([\d.]+)/.exec(location.hash);

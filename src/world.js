@@ -319,6 +319,7 @@ function drawAids(c, S, x, y, w, h, dpr, bw) {
 function drawFinder(S, W, H, dpr, now) {
   const c = VF.ctx, r = S.vfRect, aid = S.aids;
   const x = r.x * dpr, y = r.y * dpr, w = r.w * dpr, h = r.h * dpr, rad = r.r * dpr;
+  if (w < 2 || h < 2 || W < 2 || H < 2) return; // nothing to draw into, e.g. loaded in a hidden frame
   c.save();
   // darkness closes in softly from the edges, and never has a hard rim
   if (S.tunnel > 0) {
